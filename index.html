@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="title">Conversor de Moedas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="max-w-2xl mx-auto mt-10 p-6 bg-white rounded-xl shadow-lg animate__animated animate__fadeIn">
+    <h1 class="text-3xl font-bold text-center mb-6" data-i18n="title">Conversor de Moedas</h1>
+
+    <div class="flex flex-col gap-4">
+      <input type="number" id="amount" placeholder="Valor" class="p-3 border rounded text-lg" />
+      <select id="fromCurrency" class="p-3 border rounded text-lg"></select>
+      <select id="toCurrency" class="p-3 border rounded text-lg"></select>
+      <button id="convertBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded" data-i18n="convert">Converter</button>
+    </div>
+
+    <div id="result" class="mt-6 text-xl font-bold text-center animate__animated"></div>
+
+    <canvas id="historyChart" class="mt-10"></canvas>
+
+    <div class="flex justify-center gap-4 mt-6">
+      <button onclick="setLanguage('pt')" class="text-2xl">🇧🇷</button>
+      <button onclick="setLanguage('en')" class="text-2xl">🇺🇸</button>
+    </div>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
